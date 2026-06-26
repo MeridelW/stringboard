@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stringboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --bg: #f9f9fb;
+    --panel: #ffffff;
+    --border: #e0e0e6;
+    --text: #1c1b22;
+    --text-muted: #5b5b66;
+    --accent: #0060df;
+    --stale: #c50042;
+    --fresh: #2e7d32;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--panel);
+  }
+  header h1 { margin: 0 0 4px; font-size: 20px; }
+  header p { margin: 0; color: var(--text-muted); font-size: 13px; }
+
+  .controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 16px 24px;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+  }
+  .controls input[type="search"] {
+    flex: 1;
+    min-width: 200px;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .controls select, .controls label {
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+  }
+  .controls label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+
+  table { width: 100%; border-collapse: collapse; }
+  thead th {
+    text-align: left;
+    padding: 10px 24px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+  }
+  thead th:hover { color: var(--accent); }
+  tbody tr.row { cursor: pointer; border-bottom: 1px solid var(--border); }
+  tbody tr.row:hover { background: #f0f4ff; }
+  tbody td { padding: 10px 24px; font-size: 14px; vertical-align: top; }
+  td.id { font-family: ui-monospace, monospace; font-size: 13px; }
+  td.value { color: var(--text-muted); max-width: 360px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; }
+  .badge.stale { background: #fde7ec; color: var(--stale); }
+  .badge.fresh { background: #e6f4ea; color: var(--fresh); }
+  .badge.checked { background: #e6f4ea; color: var(--fresh); }
+  .badge.unchecked { background: #f0f0f3; color: var(--text-muted); }
+
+  tr.detail-row td {
+    background: #fbfbfd;
+    padding: 16px 24px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .detail-grid div span.label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+  .detail-grid div span.val { font-size: 14px; }
+  a.source-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 13px;
+  }
+  a.source-link:hover { text-decoration: underline; }
+
+  .propose-box {
+    margin-top: 16px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: white;
+  }
+  .propose-box h4 { margin: 0 0 8px; font-size: 13px; text-transform: uppercase; color: var(--text-muted); }
+  .propose-box textarea {
+    width: 100%;
+    min-height: 60px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    resize: vertical;
+  }
+  .propose-box .actions { margin-top: 8px; display: flex; gap: 8px; align-items: center; }
+  .propose-box button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    background: var(--accent);
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .propose-box button:disabled { background: #c5c5cc; cursor: not-allowed; }
+  .propose-box .note { font-size: 12px; color: var(--text-muted); }
+
+  .voice-toggle { display: flex; align-items: center; gap: 6px; font-size: 13px; margin-top: 4px; }
+
+  #count { padding: 8px 24px; font-size: 12px; color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Stringboard</h1>
+  <p>Live UI strings pulled from <a href="https://github.com/mozilla-firefox/firefox" target="_blank" rel="noopener">mozilla-firefox/firefox</a>. Refreshed nightly.</p>
+</header>
+
+<div class="controls">
+  <input type="search" id="search" placeholder="Search by id, value, or file…">
+  <select id="fileFilter"><option value="">All files</option></select>
+  <select id="staleFilter">
+    <option value="">All strings</option>
+    <option value="true">Stale only</option>
+    <option value="false">Fresh only</option>
+  </select>
+  <label><input type="checkbox" id="voiceFilter"> Needs voice check</label>
+</div>
+<div id="count"></div>
+
+<table>
+  <thead>
+    <tr>
+      <th data-sort="id">ID</th>
+      <th data-sort="file">File</th>
+      <th data-sort="value">Value</th>
+      <th data-sort="lastUpdated">Last updated</th>
+      <th data-sort="lastAuthor">Author</th>
+      <th data-sort="stale">Status</th>
+      <th data-sort="voiceChecked">Voice checked</th>
+    </tr>
+  </thead>
+  <tbody id="rows"></tbody>
+</table>
+
+<script>
+let DATA = [];
+let sortKey = "file";
+let sortAsc = true;
+let openId = null;
+
+function fmtDate(iso) {
+  if (!iso) return "—";
+  return new Date(iso).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+}
+
+function rowKey(r) { return r.file + "::" + r.id; }
+
+function matchesFilters(r) {
+  const q = document.getElementById("search").value.trim().toLowerCase();
+  const fileFilter = document.getElementById("fileFilter").value;
+  const staleFilter = document.getElementById("staleFilter").value;
+  const voiceFilter = document.getElementById("voiceFilter").checked;
+
+  if (fileFilter && r.file !== fileFilter) return false;
+  if (staleFilter && String(!!r.stale) !== staleFilter) return false;
+  if (voiceFilter && r.voiceChecked) return false;
+  if (q) {
+    const hay = (r.id + " " + (r.value || "") + " " + r.file + " " + JSON.stringify(r.attributes || {})).toLowerCase();
+    if (!hay.includes(q)) return false;
+  }
+  return true;
+}
+
+function sortRows(rows) {
+  return rows.slice().sort((a, b) => {
+    let av = a[sortKey], bv = b[sortKey];
+    if (av === null || av === undefined) av = "";
+    if (bv === null || bv === undefined) bv = "";
+    if (av < bv) return sortAsc ? -1 : 1;
+    if (av > bv) return sortAsc ? 1 : -1;
+    return 0;
+  });
+}
+
+function valuePreview(r) {
+  if (r.value) return r.value;
+  const attrs = r.attributes || {};
+  const keys = Object.keys(attrs);
+  if (keys.length) return keys.map(k => `.${k} = ${attrs[k]}`).join("  ");
+  return "—";
+}
+
+function render() {
+  const tbody = document.getElementById("rows");
+  tbody.innerHTML = "";
+  const filtered = sortRows(DATA.filter(matchesFilters));
+  document.getElementById("count").textContent = `${filtered.length} of ${DATA.length} strings`;
+
+  for (const r of filtered) {
+    const key = rowKey(r);
+    const tr = document.createElement("tr");
+    tr.className = "row";
+    tr.innerHTML = `
+      <td class="id">${r.id}</td>
+      <td>${r.file.split("/").pop()}</td>
+      <td class="value">${escapeHtml(valuePreview(r))}</td>
+      <td>${fmtDate(r.lastUpdated)}</td>
+      <td>${r.lastAuthor || "—"}</td>
+      <td>${r.stale === null ? "—" : `<span class="badge ${r.stale ? "stale" : "fresh"}">${r.stale ? "Stale" : "Fresh"}</span>`}</td>
+      <td><span class="badge ${r.voiceChecked ? "checked" : "unchecked"}">${r.voiceChecked ? "Checked" : "Not checked"}</span></td>
+    `;
+    tr.addEventListener("click", () => toggleDetail(key));
+    tbody.appendChild(tr);
+
+    if (openId === key) {
+      tbody.appendChild(renderDetail(r));
+    }
+  }
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+function renderDetail(r) {
+  const tr = document.createElement("tr");
+  tr.className = "detail-row";
+  const td = document.createElement("td");
+  td.colSpan = 7;
+  td.innerHTML = `
+    <div class="detail-grid">
+      <div><span class="label">Group</span><span class="val">${r.group || "—"}</span></div>
+      <div><span class="label">File</span><span class="val">${r.file}</span></div>
+      <div><span class="label">Line</span><span class="val">${r.line}</span></div>
+      <div><span class="label">Trigger</span><span class="val">${r.trigger || "TODO"}</span></div>
+      <div><span class="label">Visibility</span><span class="val">${r.visibility || "TODO"}</span></div>
+      <div><span class="label">View source</span><span class="val"><a class="source-link" target="_blank" rel="noopener" href="${r.sourceUrl}">${r.sourceUrl.split("/").pop()} ↗</a></span></div>
+    </div>
+    <div><strong>Value:</strong> ${escapeHtml(r.value || "(no value — attribute-only message)")}</div>
+    ${Object.keys(r.attributes || {}).length ? `<div style="margin-top:6px;"><strong>Attributes:</strong> ${Object.entries(r.attributes).map(([k, v]) => `<code>.${k}</code> = ${escapeHtml(v)}`).join("  •  ")}</div>` : ""}
+    <label class="voice-toggle">
+      <input type="checkbox" ${r.voiceChecked ? "checked" : ""} data-voice-toggle>
+      Mark as voice-checked
+    </label>
+    <div class="propose-box">
+      <h4>Propose an edit</h4>
+      <textarea placeholder="Suggested new copy…">${escapeHtml(r.value || "")}</textarea>
+      <div class="actions">
+        <button data-propose disabled title="Opening real PRs is a future step">Propose as pull request</button>
+        <span class="note">Coming soon — will open a PR against mozilla-firefox/firefox.</span>
+      </div>
+    </div>
+  `;
+  td.querySelector("[data-voice-toggle]").addEventListener("change", (e) => {
+    r.voiceChecked = e.target.checked;
+    render();
+  });
+  tr.appendChild(td);
+  return tr;
+}
+
+function toggleDetail(key) {
+  openId = openId === key ? null : key;
+  render();
+}
+
+function populateFileFilter() {
+  const sel = document.getElementById("fileFilter");
+  const files = [...new Set(DATA.map(r => r.file))].sort();
+  for (const f of files) {
+    const opt = document.createElement("option");
+    opt.value = f;
+    opt.textContent = f;
+    sel.appendChild(opt);
+  }
+}
+
+document.querySelectorAll("th[data-sort]").forEach(th => {
+  th.addEventListener("click", () => {
+    const key = th.dataset.sort;
+    if (sortKey === key) sortAsc = !sortAsc;
+    else { sortKey = key; sortAsc = true; }
+    render();
+  });
+});
+
+["search", "fileFilter", "staleFilter"].forEach(id =>
+  document.getElementById(id).addEventListener("input", render)
+);
+document.getElementById("voiceFilter").addEventListener("change", render);
+
+fetch("real_strings.json")
+  .then(r => r.json())
+  .then(data => {
+    DATA = data;
+    populateFileFilter();
+    render();
+  })
+  .catch(err => {
+    document.getElementById("rows").innerHTML =
+      `<tr><td colspan="7">Failed to load real_strings.json: ${err}</td></tr>`;
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+name: Refresh string data
+
+on:
+  schedule:
+    - cron: "17 6 * * *"  # nightly, ~6:17 UTC
+  workflow_dispatch: {}     # manual "Run workflow" button
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      - name: Pull latest strings
+        env:
+          # mozilla-firefox enforces SAML SSO, so the default GITHUB_TOKEN
+          # (scoped only to this repo, no SSO authorization) can't read it.
+          # FIREFOX_READ_TOKEN is a PAT with SSO access to mozilla-firefox,
+          # added as a repo secret - see README for setup.
+          GH_TOKEN: ${{ secrets.FIREFOX_READ_TOKEN }}
+        run: python3 pull_strings.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "stringboard-bot"
+          git config user.email "actions@github.com"
+          git add real_strings.json
+          git diff --cached --quiet || git commit -m "Refresh string data"
+          git push
