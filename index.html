@@ -154,6 +154,12 @@
 
 <div class="controls">
   <input type="search" id="search" placeholder="Search by id, value, or file…">
+  <select id="platformFilter">
+    <option value="">All platforms</option>
+    <option value="desktop">Desktop</option>
+    <option value="android">Android</option>
+    <option value="ios">iOS</option>
+  </select>
   <select id="fileFilter"><option value="">All files</option></select>
   <select id="staleFilter">
     <option value="">All strings</option>
@@ -167,6 +173,7 @@
 <table>
   <thead>
     <tr>
+      <th data-sort="platform">Platform</th>
       <th data-sort="id">ID</th>
       <th data-sort="file">File</th>
       <th data-sort="value">Value</th>
@@ -198,6 +205,8 @@ function matchesFilters(r) {
   const staleFilter = document.getElementById("staleFilter").value;
   const voiceFilter = document.getElementById("voiceFilter").checked;
 
+  const platformFilter = document.getElementById("platformFilter").value;
+  if (platformFilter && r.platform !== platformFilter) return false;
   if (fileFilter && r.file !== fileFilter) return false;
   if (staleFilter && String(!!r.stale) !== staleFilter) return false;
   if (voiceFilter && r.voiceChecked) return false;
@@ -238,6 +247,7 @@ function render() {
     const tr = document.createElement("tr");
     tr.className = "row";
     tr.innerHTML = `
+      <td>${r.platform}</td>
       <td class="id">${r.id}</td>
       <td>${r.file.split("/").pop()}</td>
       <td class="value">${escapeHtml(valuePreview(r))}</td>
@@ -263,9 +273,10 @@ function renderDetail(r) {
   const tr = document.createElement("tr");
   tr.className = "detail-row";
   const td = document.createElement("td");
-  td.colSpan = 7;
+  td.colSpan = 8;
   td.innerHTML = `
     <div class="detail-grid">
+      <div><span class="label">Platform</span><span class="val">${r.platform}</span></div>
       <div><span class="label">Group</span><span class="val">${r.group || "—"}</span></div>
       <div><span class="label">File</span><span class="val">${r.file}</span></div>
       <div><span class="label">Line</span><span class="val">${r.line}</span></div>
@@ -274,6 +285,7 @@ function renderDetail(r) {
       <div><span class="label">View source</span><span class="val"><a class="source-link" target="_blank" rel="noopener" href="${r.sourceUrl}">${r.sourceUrl.split("/").pop()} ↗</a></span></div>
     </div>
     <div><strong>Value:</strong> ${escapeHtml(r.value || "(no value — attribute-only message)")}</div>
+    ${r.note ? `<div style="margin-top:6px;"><strong>Translator note:</strong> ${escapeHtml(r.note)}</div>` : ""}
     ${Object.keys(r.attributes || {}).length ? `<div style="margin-top:6px;"><strong>Attributes:</strong> ${Object.entries(r.attributes).map(([k, v]) => `<code>.${k}</code> = ${escapeHtml(v)}`).join("  •  ")}</div>` : ""}
     <label class="voice-toggle">
       <input type="checkbox" ${r.voiceChecked ? "checked" : ""} data-voice-toggle>
@@ -321,7 +333,7 @@ document.querySelectorAll("th[data-sort]").forEach(th => {
   });
 });
 
-["search", "fileFilter", "staleFilter"].forEach(id =>
+["search", "platformFilter", "fileFilter", "staleFilter"].forEach(id =>
   document.getElementById(id).addEventListener("input", render)
 );
 document.getElementById("voiceFilter").addEventListener("change", render);
@@ -335,7 +347,7 @@ fetch("real_strings.json")
   })
   .catch(err => {
     document.getElementById("rows").innerHTML =
-      `<tr><td colspan="7">Failed to load real_strings.json: ${err}</td></tr>`;
+      `<tr><td colspan="8">Failed to load real_strings.json: ${err}</td></tr>`;
   });
 </script>
 

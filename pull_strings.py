@@ -1,29 +1,29 @@
 """
-Stringboard - real data pull, stage 2
-Pulls live .ftl files from the mozilla-firefox/firefox repo on GitHub,
-parses them into the Stringboard record shape, and enriches each string
-with real last-commit metadata (date + author) via the GitHub GraphQL
-blame API.
+Stringboard - real data pull, stage 3 (multi-platform)
+Pulls live source strings for Firefox Desktop, Android, and iOS and parses
+them into a single, common Stringboard record shape, enriched with real
+commit metadata.
 
-What this does:
-  - Fetches .ftl files via raw.githubusercontent.com (no auth needed).
-  - Parses them with fluent.syntax: group headers (## comments), values,
-    attributes (.label, .accesskey, .title), term references.
-  - Builds a real, working "View source" sourceUrl per string.
-  - For each file, runs one GraphQL "blame" query (via `gh api graphql`,
-    using the token from `gh auth login`) to get the line-level commit
-    history, then maps each string's line number to the commit that last
-    touched it. This gives accurate per-string lastUpdated/lastAuthor
-    with one API call per file, instead of one REST call per string.
-  - Computes "stale" from lastUpdated vs STALE_THRESHOLD_DAYS.
+Sources (auto-discovered, not hand-picked, so adding new files upstream
+doesn't require touching this script):
+  - Desktop: all .ftl files under browser/locales/en-US and
+    toolkit/locales/en-US in mozilla-firefox/firefox (Fluent format).
+  - Android: all base (English-source) strings.xml files under
+    mobile/android/fenix and mobile/android/android-components in
+    mozilla-firefox/firefox (Android XML format), excluding
+    samples/examples/test-only modules and Focus (a different product).
+  - iOS: Localizable.strings files under firefox-ios/firefox-ios in the
+    separate mozilla-mobile/firefox-ios repo (Apple .strings format).
+
+For each file, one GraphQL "blame" query gets line-level commit history,
+which is mapped to each string's line number for real lastUpdated/lastAuthor
+- one API call per file rather than one per string.
 
 Status model (decided 2026-06-25):
-  - "stale" is computed: a string is stale if its last commit is older
-    than STALE_THRESHOLD_DAYS (default 540 days / ~18 months). Adjust
-    once real commit data is flowing and you have a feel for what's
-    actually too old.
-  - "voiceChecked" is a plain boolean a content designer sets by hand
-    after reviewing a string - not auto-detected. Defaults to False.
+  - "stale": computed - last commit older than STALE_THRESHOLD_DAYS
+    (540 days / ~18 months, adjustable below).
+  - "voiceChecked": plain boolean a content designer sets by hand after
+    review - not auto-detected. Defaults to False.
 
 Still TODO (needs manual tagging or a code-search pass, not done here):
   - "trigger" - what UI action surfaces this string
@@ -31,36 +31,23 @@ Still TODO (needs manual tagging or a code-search pass, not done here):
   - opening a real pull request
 
 Requires:
-  - `gh auth login` already done (this script shells out to `gh api graphql`)
+  - `gh auth login` already done (this script shells out to `gh api graphql`
+    and uses `gh auth token` for direct REST/tree calls).
 
 Usage:
   python3 pull_strings.py
 """
+import html
 import json
+import re
 import subprocess
 import urllib.request
 from datetime import datetime, timezone
 
-from fluent.syntax import parse
+from fluent.syntax import parse as fluent_parse
 from fluent.syntax.ast import Message, GroupComment
 
-RAW_BASE = "https://raw.githubusercontent.com/mozilla-firefox/firefox/main/"
-BLOB_BASE = "https://github.com/mozilla-firefox/firefox/blob/main/"
-OWNER = "mozilla-firefox"
-REPO = "firefox"
 STALE_THRESHOLD_DAYS = 540  # ~18 months - adjust once real dates are in
-
-# Real Firefox locale files, picked for areas Meridel is actively working
-# in (permissions, password import/migration, password autofill). Add
-# more here as we cover more surfaces.
-FILES = [
-    "browser/locales/en-US/browser/preferences/permissions.ftl",
-    "browser/locales/en-US/browser/browser.ftl",
-    "browser/locales/en-US/browser/permissions.ftl",  # persistent-storage doorhanger
-    "browser/locales/en-US/browser/migrationWizard.ftl",  # password import/migration dialog
-    "toolkit/locales/en-US/toolkit/main-window/autocomplete.ftl",  # password autofill suggestions
-    "browser/locales/en-US/browser/aboutLogins.ftl",  # password manager page
-]
 
 BLAME_QUERY = """
 query($owner: String!, $name: String!, $path: String!) {
@@ -74,10 +61,7 @@ query($owner: String!, $name: String!, $path: String!) {
               endingLine
               commit {
                 committedDate
-                author {
-                  name
-                  user { login }
-                }
+                author { name user { login } }
               }
             }
           }
@@ -88,9 +72,51 @@ query($owner: String!, $name: String!, $path: String!) {
 }
 """
 
+# Each source describes a repo + discovery roots + which parser to use.
+SOURCES = [
+    {
+        "platform": "desktop",
+        "owner": "mozilla-firefox",
+        "repo": "firefox",
+        "format": "fluent",
+        "roots": [
+            {"path": "browser/locales/en-US", "ext": ".ftl"},
+            {"path": "toolkit/locales/en-US", "ext": ".ftl"},
+        ],
+    },
+    {
+        "platform": "android",
+        "owner": "mozilla-firefox",
+        "repo": "firefox",
+        "format": "android-xml",
+        "roots": [
+            {"path": "mobile/android/fenix/app/src/main/res/values", "filename": "strings.xml"},
+            {"path": "mobile/android/android-components/components", "filename": "strings.xml", "must_contain": "/values/"},
+        ],
+        "exclude_substrings": ["/samples/", "/examples/", "fenix/app/longfox"],
+    },
+    {
+        "platform": "ios",
+        "owner": "mozilla-mobile",
+        "repo": "firefox-ios",
+        "format": "ios-strings",
+        "roots": [
+            {"path": "firefox-ios", "filename": "Localizable.strings", "must_contain": "en-US.lproj"},
+        ],
+    },
+]
 
-def fetch(path):
-    url = RAW_BASE + path
+
+def raw_base(owner, repo):
+    return f"https://raw.githubusercontent.com/{owner}/{repo}/main/"
+
+
+def blob_base(owner, repo):
+    return f"https://github.com/{owner}/{repo}/blob/main/"
+
+
+def fetch(owner, repo, path):
+    url = raw_base(owner, repo) + path
     with urllib.request.urlopen(url) as resp:
         return resp.read().decode("utf-8")
 
@@ -99,21 +125,69 @@ def line_number(text, offset):
     return text.count("\n", 0, offset) + 1
 
 
-def fetch_blame_ranges(path):
-    """One GraphQL call per file: returns a list of
-    (starting_line, ending_line, committed_date, author_name) tuples."""
+def gh_api(path_with_query):
+    result = subprocess.run(
+        ["gh", "api", path_with_query],
+        capture_output=True, text=True, check=True,
+    )
+    return json.loads(result.stdout)
+
+
+def resolve_subtree_sha(owner, repo, path):
+    """Walk from the repo root tree to the tree sha for `path`."""
+    sha = "main"
+    for part in path.split("/"):
+        data = gh_api(f"repos/{owner}/{repo}/git/trees/{sha}")
+        match = next((t for t in data["tree"] if t["path"] == part), None)
+        if not match:
+            raise RuntimeError(f"path component {part!r} not found while resolving {path}")
+        sha = match["sha"]
+    return sha
+
+
+def discover_files(source):
+    owner, repo = source["owner"], source["repo"]
+    excludes = source.get("exclude_substrings", [])
+    found = []
+    for root in source["roots"]:
+        sha = resolve_subtree_sha(owner, repo, root["path"])
+        data = gh_api(f"repos/{owner}/{repo}/git/trees/{sha}?recursive=1")
+        if data.get("truncated"):
+            print(f"WARNING: tree listing truncated for {owner}/{repo}:{root['path']}")
+        for entry in data["tree"]:
+            if entry.get("type") != "blob":
+                continue
+            full_path = f"{root['path']}/{entry['path']}"
+            if "ext" in root and not full_path.endswith(root["ext"]):
+                continue
+            if "filename" in root and not full_path.endswith("/" + root["filename"]):
+                continue
+            if "must_contain" in root and root["must_contain"] not in full_path:
+                continue
+            if any(ex in full_path for ex in excludes):
+                continue
+            found.append(full_path)
+    return sorted(set(found))
+
+
+def fetch_blame_ranges(owner, repo, path):
+    """One GraphQL call per file: list of
+    (starting_line, ending_line, committed_date, author_name)."""
     result = subprocess.run(
         [
             "gh", "api", "graphql",
             "-f", f"query={BLAME_QUERY}",
-            "-f", f"owner={OWNER}",
-            "-f", f"name={REPO}",
+            "-f", f"owner={owner}",
+            "-f", f"name={repo}",
             "-f", f"path={path}",
         ],
         capture_output=True, text=True, check=True,
     )
     data = json.loads(result.stdout)
-    ranges = data["data"]["repository"]["ref"]["target"]["blame"]["ranges"]
+    target = data["data"]["repository"]["ref"]["target"]
+    if not target:
+        return []
+    ranges = target["blame"]["ranges"]
     out = []
     for r in ranges:
         commit = r["commit"]
@@ -138,8 +212,31 @@ def compute_stale(last_updated_iso):
     return age_days > STALE_THRESHOLD_DAYS
 
 
-def parse_file(path, text, blame_ranges):
-    tree = parse(text, with_spans=True)
+def make_record(platform, owner, repo, path, line, rid, group, value, attributes, note, blame_ranges):
+    last_updated, last_author = blame_for_line(blame_ranges, line)
+    return {
+        "platform": platform,
+        "id": rid,
+        "file": path,
+        "line": line,
+        "sourceUrl": f"{blob_base(owner, repo)}{path}#L{line}",
+        "group": group,
+        "note": note,
+        "value": value,
+        "attributes": attributes,
+        "lastUpdated": last_updated,
+        "lastAuthor": last_author,
+        "stale": compute_stale(last_updated),
+        # TODO: needs manual tagging or a code-search pass
+        "trigger": None,
+        "visibility": None,
+        # Set by hand by a content designer, not auto-detected:
+        "voiceChecked": False,
+    }
+
+
+def parse_fluent(platform, owner, repo, path, text, blame_ranges):
+    tree = fluent_parse(text, with_spans=True)
     records = []
     current_group = None
     for entry in tree.body:
@@ -158,42 +255,79 @@ def parse_file(path, text, blame_ranges):
                     el.value for el in attr.value.elements if hasattr(el, "value")
                 )
             line = line_number(text, entry.span.start)
-            last_updated, last_author = blame_for_line(blame_ranges, line)
-            records.append({
-                "id": entry.id.name,
-                "file": path,
-                "line": line,
-                "sourceUrl": f"{BLOB_BASE}{path}#L{line}",
-                "group": current_group,
-                "value": value,
-                "attributes": attrs,
-                "lastUpdated": last_updated,
-                "lastAuthor": last_author,
-                "stale": compute_stale(last_updated),
-                # TODO: needs manual tagging or a code-search pass
-                "trigger": None,
-                "visibility": None,
-                # Set by hand by a content designer, not auto-detected:
-                "voiceChecked": False,
-            })
+            records.append(make_record(
+                platform, owner, repo, path, line, entry.id.name,
+                current_group, value, attrs, None, blame_ranges,
+            ))
     return records
+
+
+ANDROID_STRING_RE = re.compile(
+    r'(?:<!--\s*(?P<comment>(?:(?!-->).)*?)\s*-->\s*\n\s*)?'
+    r'<string\s+name="(?P<name>[^"]+)"[^>]*>(?P<value>(?:(?!</string>).)*?)</string>',
+    re.DOTALL,
+)
+
+
+def parse_android_xml(platform, owner, repo, path, text, blame_ranges):
+    records = []
+    for m in ANDROID_STRING_RE.finditer(text):
+        line = line_number(text, m.start())
+        value = html.unescape(m.group("value").strip())
+        records.append(make_record(
+            platform, owner, repo, path, line, m.group("name"),
+            None, value, {}, m.group("comment"), blame_ranges,
+        ))
+    return records
+
+
+IOS_STRING_RE = re.compile(
+    r'(?:/\*\s*(?P<comment>(?:(?!\*/).)*?)\s*\*/\s*\n\s*)?'
+    r'^"(?P<key>(?:[^"\\]|\\.)*)"\s*=\s*"(?P<value>(?:[^"\\]|\\.)*)"\s*;',
+    re.MULTILINE | re.DOTALL,
+)
+
+
+def parse_ios_strings(platform, owner, repo, path, text, blame_ranges):
+    records = []
+    for m in IOS_STRING_RE.finditer(text):
+        line = line_number(text, m.start())
+        records.append(make_record(
+            platform, owner, repo, path, line, m.group("key"),
+            None, m.group("value"), {}, m.group("comment"), blame_ranges,
+        ))
+    return records
+
+
+PARSERS = {
+    "fluent": parse_fluent,
+    "android-xml": parse_android_xml,
+    "ios-strings": parse_ios_strings,
+}
 
 
 def main():
     all_records = []
-    for path in FILES:
-        text = fetch(path)
-        blame_ranges = fetch_blame_ranges(path)
-        records = parse_file(path, text, blame_ranges)
-        all_records.extend(records)
-        print(f"{path}: {len(records)} strings parsed")
+    for source in SOURCES:
+        platform, owner, repo = source["platform"], source["owner"], source["repo"]
+        parser = PARSERS[source["format"]]
+        files = discover_files(source)
+        print(f"\n[{platform}] discovered {len(files)} files in {owner}/{repo}")
+        for path in files:
+            text = fetch(owner, repo, path)
+            blame_ranges = fetch_blame_ranges(owner, repo, path)
+            records = parser(platform, owner, repo, path, text, blame_ranges)
+            all_records.extend(records)
+            print(f"  {path}: {len(records)} strings")
 
     with open("real_strings.json", "w") as f:
         json.dump(all_records, f, indent=2)
 
+    by_platform = {}
+    for r in all_records:
+        by_platform[r["platform"]] = by_platform.get(r["platform"], 0) + 1
     print(f"\nTotal: {len(all_records)} strings written to real_strings.json")
-    print("\nSample record:")
-    print(json.dumps(all_records[0], indent=2))
+    print("By platform:", by_platform)
 
 
 if __name__ == "__main__":
