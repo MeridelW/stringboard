@@ -143,6 +143,16 @@
   .voice-toggle { display: flex; align-items: center; gap: 6px; font-size: 13px; margin-top: 4px; }
 
   #count { padding: 8px 24px; font-size: 12px; color: var(--text-muted); }
+
+  td.fieldLabel { font-size: 13px; }
+  td.fieldLabel.inferred { color: var(--text-muted); font-style: italic; }
+  .variant-note { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; color: #a85a1f; margin-bottom: 6px; }
+  .variant-row { display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px; }
+  .variant-key {
+    flex: 0 0 auto; font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .03em; color: #a85a1f; background: #fdf1e6; border-radius: 4px;
+    padding: 1px 6px; white-space: nowrap;
+  }
 </style>
 </head>
 <body>
@@ -167,6 +177,9 @@
     <option value="false">Fresh only</option>
   </select>
   <label><input type="checkbox" id="voiceFilter"> Needs voice check</label>
+  <label title="Screen-reader labels/descriptions (aria-label, aria-description) aren't shown on screen - read aloud by assistive tech only. Off by default.">
+    <input type="checkbox" id="ariaFilter"> Show screen-reader-only labels
+  </label>
 </div>
 <div id="count"></div>
 
@@ -176,7 +189,8 @@
       <th data-sort="platform">Platform</th>
       <th data-sort="id">ID</th>
       <th data-sort="file">File</th>
-      <th data-sort="value">Value</th>
+      <th data-sort="fieldLabel">Content type</th>
+      <th data-sort="text">Text</th>
       <th data-sort="lastUpdated">Last updated</th>
       <th data-sort="lastAuthor">Author</th>
       <th data-sort="stale">Status</th>
@@ -197,21 +211,34 @@ function fmtDate(iso) {
   return new Date(iso).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
 }
 
-function rowKey(r) { return r.file + "::" + r.id; }
+// A message can now produce several rows (its value + each attribute), so
+// the key needs the field too, not just file+id.
+function rowKey(r) { return r.file + "::" + r.id + "::" + r.field; }
+
+// All of a row's variant wordings joined into one searchable/sortable
+// string (e.g. "Mozilla Firefox — Private Browsing / Mozilla Firefox
+// Private Browsing" for an OS-varying string).
+function variantText(r) {
+  return (r.variants || []).map(v => v.text).join(" / ");
+}
 
 function matchesFilters(r) {
   const q = document.getElementById("search").value.trim().toLowerCase();
   const fileFilter = document.getElementById("fileFilter").value;
   const staleFilter = document.getElementById("staleFilter").value;
   const voiceFilter = document.getElementById("voiceFilter").checked;
+  const ariaFilter = document.getElementById("ariaFilter").checked;
 
   const platformFilter = document.getElementById("platformFilter").value;
   if (platformFilter && r.platform !== platformFilter) return false;
   if (fileFilter && r.file !== fileFilter) return false;
   if (staleFilter && String(!!r.stale) !== staleFilter) return false;
   if (voiceFilter && r.voiceChecked) return false;
+  // Screen-reader-only labels are real content but a different category
+  // (never shown as their own visible text) - hidden unless asked for.
+  if (r.screenReaderOnly && !ariaFilter) return false;
   if (q) {
-    const hay = (r.id + " " + (r.value || "") + " " + r.file + " " + JSON.stringify(r.attributes || {})).toLowerCase();
+    const hay = (r.id + " " + r.id.replace(/[-.]/g, " ") + " " + variantText(r) + " " + r.file + " " + (r.fieldLabel || "") + " " + (r.section || "")).toLowerCase();
     if (!hay.includes(q)) return false;
   }
   return true;
@@ -219,7 +246,8 @@ function matchesFilters(r) {
 
 function sortRows(rows) {
   return rows.slice().sort((a, b) => {
-    let av = a[sortKey], bv = b[sortKey];
+    let av = sortKey === "text" ? variantText(a) : a[sortKey];
+    let bv = sortKey === "text" ? variantText(b) : b[sortKey];
     if (av === null || av === undefined) av = "";
     if (bv === null || bv === undefined) bv = "";
     if (av < bv) return sortAsc ? -1 : 1;
@@ -228,12 +256,12 @@ function sortRows(rows) {
   });
 }
 
+// One-line preview for the table row. Multi-variant strings (OS-specific or
+// plural wording) show every variant joined with " / " here; the full
+// stacked, labeled breakdown is in the detail row below.
 function valuePreview(r) {
-  if (r.value) return r.value;
-  const attrs = r.attributes || {};
-  const keys = Object.keys(attrs);
-  if (keys.length) return keys.map(k => `.${k} = ${attrs[k]}`).join("  ");
-  return "—";
+  const text = variantText(r);
+  return text || "—";
 }
 
 function render() {
@@ -250,6 +278,7 @@ function render() {
       <td>${r.platform}</td>
       <td class="id">${r.id}</td>
       <td>${r.file.split("/").pop()}</td>
+      <td class="fieldLabel${r.fieldLabelInferred ? " inferred" : ""}" title="${r.fieldLabelInferred ? "Guessed from the string's name, not ground truth" : ""}">${escapeHtml(r.fieldLabel || "—")}</td>
       <td class="value">${escapeHtml(valuePreview(r))}</td>
       <td>${fmtDate(r.lastUpdated)}</td>
       <td>${r.lastAuthor || "—"}</td>
@@ -273,27 +302,32 @@ function renderDetail(r) {
   const tr = document.createElement("tr");
   tr.className = "detail-row";
   const td = document.createElement("td");
-  td.colSpan = 8;
+  td.colSpan = 9;
+  const variants = r.variants || [];
+  const variantsHtml = variants.length > 1
+    ? `<div class="variant-note">${escapeHtml(r.variantNote || "Wording varies")}</div>` +
+      variants.map(v => `<div class="variant-row"><span class="variant-key">${escapeHtml(v.key || "")}</span><span>${escapeHtml(v.text)}</span></div>`).join("")
+    : `<div>${escapeHtml(variants[0]?.text || "(empty)")}</div>`;
   td.innerHTML = `
     <div class="detail-grid">
       <div><span class="label">Platform</span><span class="val">${r.platform}</span></div>
-      <div><span class="label">Group</span><span class="val">${r.group || "—"}</span></div>
+      <div><span class="label">Content type</span><span class="val">${escapeHtml(r.fieldLabel || "—")}${r.fieldLabelInferred ? " (guessed from name)" : ""}</span></div>
+      <div><span class="label">Section</span><span class="val">${escapeHtml(r.section || "—")}</span></div>
       <div><span class="label">File</span><span class="val">${r.file}</span></div>
       <div><span class="label">Line</span><span class="val">${r.line}</span></div>
       <div><span class="label">Trigger</span><span class="val">${r.trigger || "TODO"}</span></div>
       <div><span class="label">Visibility</span><span class="val">${r.visibility || "TODO"}</span></div>
       <div><span class="label">View source</span><span class="val"><a class="source-link" target="_blank" rel="noopener" href="${r.sourceUrl}">${r.sourceUrl.split("/").pop()} ↗</a></span></div>
     </div>
-    <div><strong>Value:</strong> ${escapeHtml(r.value || "(no value — attribute-only message)")}</div>
+    <div><strong>Text:</strong>${variantsHtml}</div>
     ${r.note ? `<div style="margin-top:6px;"><strong>Translator note:</strong> ${escapeHtml(r.note)}</div>` : ""}
-    ${Object.keys(r.attributes || {}).length ? `<div style="margin-top:6px;"><strong>Attributes:</strong> ${Object.entries(r.attributes).map(([k, v]) => `<code>.${k}</code> = ${escapeHtml(v)}`).join("  •  ")}</div>` : ""}
     <label class="voice-toggle">
       <input type="checkbox" ${r.voiceChecked ? "checked" : ""} data-voice-toggle>
       Mark as voice-checked
     </label>
     <div class="propose-box">
       <h4>Propose an edit</h4>
-      <textarea placeholder="Suggested new copy…">${escapeHtml(r.value || "")}</textarea>
+      <textarea placeholder="Suggested new copy…">${escapeHtml(variants[0]?.text || "")}</textarea>
       <div class="actions">
         <button data-propose disabled title="Opening real PRs is a future step">Propose as pull request</button>
         <span class="note">Coming soon — will open a PR against mozilla-firefox/firefox.</span>
@@ -337,6 +371,7 @@ document.querySelectorAll("th[data-sort]").forEach(th => {
   document.getElementById(id).addEventListener("input", render)
 );
 document.getElementById("voiceFilter").addEventListener("change", render);
+document.getElementById("ariaFilter").addEventListener("change", render);
 
 fetch("real_strings.json")
   .then(r => r.json())
@@ -347,7 +382,7 @@ fetch("real_strings.json")
   })
   .catch(err => {
     document.getElementById("rows").innerHTML =
-      `<tr><td colspan="8">Failed to load real_strings.json: ${err}</td></tr>`;
+      `<tr><td colspan="9">Failed to load real_strings.json: ${err}</td></tr>`;
   });
 </script>
 
