@@ -177506,7 +177506,7 @@
     "note": "Option to automatically expand the collapsed sidebar when the mouse pointer\nhovers over it.",
     "lastUpdated": "2025-02-05T18:04:20Z",
     "lastAuthor": "kcochrane-mozilla",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -215335,7 +215335,7 @@
     "note": null,
     "lastUpdated": "2025-02-05T17:10:47Z",
     "lastAuthor": "markcellus",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -215389,7 +215389,7 @@
     "note": null,
     "lastUpdated": "2025-02-05T17:10:47Z",
     "lastAuthor": "markcellus",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -215443,7 +215443,7 @@
     "note": null,
     "lastUpdated": "2025-02-05T17:10:47Z",
     "lastAuthor": "markcellus",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -215497,7 +215497,7 @@
     "note": null,
     "lastUpdated": "2025-02-05T17:10:47Z",
     "lastAuthor": "markcellus",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -215551,7 +215551,7 @@
     "note": null,
     "lastUpdated": "2025-02-05T17:10:47Z",
     "lastAuthor": "markcellus",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
