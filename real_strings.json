@@ -310047,7 +310047,7 @@
     "note": "Description for text button that expands the list of domain permissions",
     "lastUpdated": "2025-02-07T16:58:05Z",
     "lastAuthor": "Zac McKenney",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -310074,7 +310074,7 @@
     "note": "Description for text button that hides the majority of the list of domain permissions",
     "lastUpdated": "2025-02-07T16:58:05Z",
     "lastAuthor": "Zac McKenney",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
