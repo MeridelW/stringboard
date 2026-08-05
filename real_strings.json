@@ -389323,5 +389323,3761 @@
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-monitor-notification-title",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 11,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L11",
+    "section": "AI Tasks",
+    "field": "value",
+    "fieldLabel": "Title",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "[smart-window-brand-name] monitor agent"
+      }
+    ],
+    "variantNote": null,
+    "note": "Desktop notification shown when a AI Tasks fires. A \"monitor\" is\na user-created task in Smart Window that watches a web page and alerts the\nuser when a condition they described is met.\nThe user-facing name is not final.",
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-monitor-notification-body",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 12,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L12",
+    "section": "AI Tasks",
+    "field": "value",
+    "fieldLabel": "Notification text",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "A page you\u2019re watching met your alert."
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-monitor-notification-snooze",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 13,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L13",
+    "section": "AI Tasks",
+    "field": "value",
+    "fieldLabel": "Notification text",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Snooze"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-monitor-notification-dismiss",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 14,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L14",
+    "section": "AI Tasks",
+    "field": "value",
+    "fieldLabel": "Notification text",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Dismiss"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-name",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 23,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L23",
+    "section": "Alert Creation Form - Strings used in the alert creation dialog and form fields",
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Alert name"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-name",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 24,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L24",
+    "section": "Alert Creation Form - Strings used in the alert creation dialog and form fields",
+    "field": ".placeholder",
+    "fieldLabel": "Placeholder text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Name this alert"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-alert",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 26,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L26",
+    "section": "Alert Creation Form - Strings used in the alert creation dialog and form fields",
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "What to watch for"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-alert",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 27,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L27",
+    "section": "Alert Creation Form - Strings used in the alert creation dialog and form fields",
+    "field": ".placeholder",
+    "fieldLabel": "Placeholder text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "E.g., price drops below $100, size M is back in stock, tickets go on sale, etc."
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-pages",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 31,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L31",
+    "section": "Alert Creation Form - Strings used in the alert creation dialog and form fields",
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Pages to watch"
+      }
+    ],
+    "variantNote": null,
+    "note": "Variables:\n  $maxPages (number) - The maximum number of webpages that can be monitored",
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-pages",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 32,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L32",
+    "section": "Alert Creation Form - Strings used in the alert creation dialog and form fields",
+    "field": ".placeholder",
+    "fieldLabel": "Placeholder text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Type or paste a webpage address"
+      }
+    ],
+    "variantNote": null,
+    "note": "Variables:\n  $maxPages (number) - The maximum number of webpages that can be monitored",
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-pages",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 33,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L33",
+    "section": "Alert Creation Form - Strings used in the alert creation dialog and form fields",
+    "field": ".description",
+    "fieldLabel": "Description",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": "One",
+        "isDefault": false,
+        "text": "Add up to $maxPages webpage."
+      },
+      {
+        "key": "Other",
+        "isDefault": true,
+        "text": "Add up to $maxPages webpages."
+      }
+    ],
+    "variantNote": "Wording varies depending on $maxPages",
+    "note": "Variables:\n  $maxPages (number) - The maximum number of webpages that can be monitored",
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-check-label",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 37,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L37",
+    "section": "Alert Creation Form - Strings used in the alert creation dialog and form fields",
+    "field": "value",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "How often to check"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-time-label",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 38,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L38",
+    "section": "Alert Creation Form - Strings used in the alert creation dialog and form fields",
+    "field": "value",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Time"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-day-label",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 39,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L39",
+    "section": "Alert Creation Form - Strings used in the alert creation dialog and form fields",
+    "field": "value",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Day"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-schedule-daily",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 44,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L44",
+    "section": "Schedule Options - Strings for scheduling alert frequency",
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Daily"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-schedule-weekly",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 46,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L46",
+    "section": "Schedule Options - Strings for scheduling alert frequency",
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Weekly"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-weekday-sunday",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 51,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L51",
+    "section": "Day labels for dropdown list for weekly scheduling",
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Sunday"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-weekday-monday",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 53,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L53",
+    "section": "Day labels for dropdown list for weekly scheduling",
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Monday"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-weekday-tuesday",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 55,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L55",
+    "section": "Day labels for dropdown list for weekly scheduling",
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Tuesday"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-weekday-wednesday",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 57,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L57",
+    "section": "Day labels for dropdown list for weekly scheduling",
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Wednesday"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-weekday-thursday",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 59,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L59",
+    "section": "Day labels for dropdown list for weekly scheduling",
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Thursday"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-weekday-friday",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 61,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L61",
+    "section": "Day labels for dropdown list for weekly scheduling",
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Friday"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-weekday-saturday",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 63,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L63",
+    "section": "Day labels for dropdown list for weekly scheduling",
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Saturday"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-create-button",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 67,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L67",
+    "section": "Alert Actions - Button labels for alert management",
+    "field": "value",
+    "fieldLabel": "Button label",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Create alert"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-cancel-button",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 68,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L68",
+    "section": "Alert Actions - Button labels for alert management",
+    "field": "value",
+    "fieldLabel": "Button label",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Cancel"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-save-button",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 69,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L69",
+    "section": "Alert Actions - Button labels for alert management",
+    "field": "value",
+    "fieldLabel": "Button label",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Save"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-delete-button",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 71,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L71",
+    "section": "Alert Actions - Button labels for alert management",
+    "field": ".aria-label",
+    "fieldLabel": "Screen reader label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": true,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Delete alert"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-edit-button",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 73,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L73",
+    "section": "Alert Actions - Button labels for alert management",
+    "field": ".aria-label",
+    "fieldLabel": "Screen reader label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": true,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Edit alert"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-pause-button",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 74,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L74",
+    "section": "Alert Actions - Button labels for alert management",
+    "field": "value",
+    "fieldLabel": "Button label",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Pause"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-resume-button",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 75,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L75",
+    "section": "Alert Actions - Button labels for alert management",
+    "field": "value",
+    "fieldLabel": "Button label",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Resume"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-check-now-button",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 76,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L76",
+    "section": "Alert Actions - Button labels for alert management",
+    "field": "value",
+    "fieldLabel": "Button label",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Check now"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-success-created",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 80,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L80",
+    "section": "Status Messages - Success notifications shown to users after alert actions",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Alert created successfully"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-success-deleted",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 81,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L81",
+    "section": "Status Messages - Success notifications shown to users after alert actions",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Alert deleted successfully"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-success-paused",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 82,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L82",
+    "section": "Status Messages - Success notifications shown to users after alert actions",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Alert paused"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-success-resumed",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 83,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L83",
+    "section": "Status Messages - Success notifications shown to users after alert actions",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Alert resumed"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-success-checking",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 84,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L84",
+    "section": "Status Messages - Success notifications shown to users after alert actions",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Checking alert"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-success-checked",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 85,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L85",
+    "section": "Status Messages - Success notifications shown to users after alert actions",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Alert check completed"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-success-updated",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 86,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L86",
+    "section": "Status Messages - Success notifications shown to users after alert actions",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Alert updated successfully"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-modal-title",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 90,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L90",
+    "section": "Dialog Headers - Titles for alert dialogs",
+    "field": "value",
+    "fieldLabel": "Title",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Create alert"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-page-title",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 94,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L94",
+    "section": "Page Content - Strings displayed on the alerts page",
+    "field": "value",
+    "fieldLabel": "Title",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Smart Window alerts"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-add-alert-button",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 95,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L95",
+    "section": "Page Content - Strings displayed on the alerts page",
+    "field": "value",
+    "fieldLabel": "Button label",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Create alert"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-task-page-description",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 96,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L96",
+    "section": "Page Content - Strings displayed on the alerts page",
+    "field": "value",
+    "fieldLabel": "Description",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Create alerts for price drops, restocks, ticket sales, and more. Choose the pages to watch and Smart Window checks for changes."
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-task-page-no-alerts",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 97,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L97",
+    "section": "Page Content - Strings displayed on the alerts page",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "No alerts created yet."
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alerts-count",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 100,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L100",
+    "section": "Page Content - Strings displayed on the alerts page",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": "One",
+        "isDefault": false,
+        "text": "$count alert"
+      },
+      {
+        "key": "Other",
+        "isDefault": true,
+        "text": "$count alerts"
+      }
+    ],
+    "variantNote": "Wording varies depending on $count",
+    "note": "Variables:\n  $count (number) - The number of alerts currently active",
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-watching-pages",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 106,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L106",
+    "section": "Page Content - Strings displayed on the alerts page",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": "One",
+        "isDefault": false,
+        "text": "Watching $count webpage"
+      },
+      {
+        "key": "Other",
+        "isDefault": true,
+        "text": "Watching $count webpages"
+      }
+    ],
+    "variantNote": "Wording varies depending on $count",
+    "note": "Variables:\n  $count (number) - The number of webpages being watched",
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-error-http-only",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 113,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L113",
+    "section": "Error Messages - Validation and error messages for alert creation",
+    "field": "value",
+    "fieldLabel": "Error message",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Only HTTP and HTTPS URLs are allowed"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-error-invalid-url",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 114,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L114",
+    "section": "Error Messages - Validation and error messages for alert creation",
+    "field": "value",
+    "fieldLabel": "Error message",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Please enter a valid URL"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-error-duplicate-url",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 115,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L115",
+    "section": "Error Messages - Validation and error messages for alert creation",
+    "field": "value",
+    "fieldLabel": "Error message",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "This URL has already been added"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-error-max-urls",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 118,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L118",
+    "section": "Error Messages - Validation and error messages for alert creation",
+    "field": "value",
+    "fieldLabel": "Error message",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": "One",
+        "isDefault": false,
+        "text": "Maximum of $maxUrls URL allowed"
+      },
+      {
+        "key": "Other",
+        "isDefault": true,
+        "text": "Maximum of $maxUrls URLs allowed"
+      }
+    ],
+    "variantNote": "Wording varies depending on $maxUrls",
+    "note": "Variables:\n  $maxUrls (number) - Maximum number of URLs allowed per alert",
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-remove-page-label",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 126,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L126",
+    "section": "Accessibility - ARIA labels and accessibility text",
+    "field": ".aria-label",
+    "fieldLabel": "Screen reader label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": true,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Remove page"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-show-details",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 128,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L128",
+    "section": "Accessibility - ARIA labels and accessibility text",
+    "field": ".aria-label",
+    "fieldLabel": "Screen reader label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": true,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Show alert details"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-add-url",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 129,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L129",
+    "section": "Accessibility - ARIA labels and accessibility text",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Save"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-change-history",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 133,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L133",
+    "section": "Alert Display - Strings used when displaying alert details",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Change history"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-schedule-daily-at",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 136,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L136",
+    "section": "Alert Display - Strings used when displaying alert details",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Check daily at $DATETIME(\u2026)"
+      }
+    ],
+    "variantNote": null,
+    "note": "Variables:\n  $time (DateTime) - The time to be formatted based on locale",
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-schedule-weekly-sunday",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 139,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L139",
+    "section": "Alert Display - Strings used when displaying alert details",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Check weekly on Sunday at $DATETIME(\u2026)"
+      }
+    ],
+    "variantNote": null,
+    "note": "Variables:\n  $time (DateTime) - The time to be formatted based on locale",
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-schedule-weekly-monday",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 142,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L142",
+    "section": "Alert Display - Strings used when displaying alert details",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Check weekly on Monday at $DATETIME(\u2026)"
+      }
+    ],
+    "variantNote": null,
+    "note": "Variables:\n  $time (DateTime) - The time to be formatted based on locale",
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-schedule-weekly-tuesday",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 145,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L145",
+    "section": "Alert Display - Strings used when displaying alert details",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Check weekly on Tuesday at $DATETIME(\u2026)"
+      }
+    ],
+    "variantNote": null,
+    "note": "Variables:\n  $time (DateTime) - The time to be formatted based on locale",
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-schedule-weekly-wednesday",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 148,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L148",
+    "section": "Alert Display - Strings used when displaying alert details",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Check weekly on Wednesday at $DATETIME(\u2026)"
+      }
+    ],
+    "variantNote": null,
+    "note": "Variables:\n  $time (DateTime) - The time to be formatted based on locale",
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-schedule-weekly-thursday",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 151,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L151",
+    "section": "Alert Display - Strings used when displaying alert details",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Check weekly on Thursday at $DATETIME(\u2026)"
+      }
+    ],
+    "variantNote": null,
+    "note": "Variables:\n  $time (DateTime) - The time to be formatted based on locale",
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-schedule-weekly-friday",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 154,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L154",
+    "section": "Alert Display - Strings used when displaying alert details",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Check weekly on Friday at $DATETIME(\u2026)"
+      }
+    ],
+    "variantNote": null,
+    "note": "Variables:\n  $time (DateTime) - The time to be formatted based on locale",
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-schedule-weekly-saturday",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 157,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L157",
+    "section": "Alert Display - Strings used when displaying alert details",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Check weekly on Saturday at $DATETIME(\u2026)"
+      }
+    ],
+    "variantNote": null,
+    "note": "Variables:\n  $time (DateTime) - The time to be formatted based on locale",
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-status-watching",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 158,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L158",
+    "section": "Alert Display - Strings used when displaying alert details",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Active"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "ai-tasks-alert-status-paused",
+    "file": "browser/locales-preview/aiWindow.ftl",
+    "line": 159,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/aiWindow.ftl#L159",
+    "section": "Alert Display - Strings used when displaying alert details",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Paused"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-07-30T19:46:31Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "smartwindow-organize-tabs-button",
+    "file": "browser/locales-preview/autoTabGrouping.ftl",
+    "line": 8,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/autoTabGrouping.ftl#L8",
+    "section": "Organize Tabs Toolbar Button",
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Organize Tabs"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-08-04T20:19:14Z",
+    "lastAuthor": "unifolia",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "smartwindow-organize-tabs-button",
+    "file": "browser/locales-preview/autoTabGrouping.ftl",
+    "line": 9,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/autoTabGrouping.ftl#L9",
+    "section": "Organize Tabs Toolbar Button",
+    "field": ".tooltiptext",
+    "fieldLabel": "Tooltip",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Organize Tabs"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-08-04T20:19:14Z",
+    "lastAuthor": "unifolia",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "smartwindow-group-tabs-panel-heading",
+    "file": "browser/locales-preview/autoTabGrouping.ftl",
+    "line": 15,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/autoTabGrouping.ftl#L15",
+    "section": "Organize Tabs Panel The panel opened from the \"Organize Tabs\" toolbar button, which suggests groups for the window's\u2026",
+    "field": "value",
+    "fieldLabel": "Heading",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Organize Tabs"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-08-04T20:19:14Z",
+    "lastAuthor": "unifolia",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "smartwindow-group-tabs-loading",
+    "file": "browser/locales-preview/autoTabGrouping.ftl",
+    "line": 19,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/autoTabGrouping.ftl#L19",
+    "section": "Organize Tabs Panel The panel opened from the \"Organize Tabs\" toolbar button, which suggests groups for the window's\u2026",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Checking tabs for useful groups\u2026"
+      }
+    ],
+    "variantNote": null,
+    "note": "Shown while the on-device model clusters the open tabs into suggestions. It is\nforming new groups from these tabs, not searching for tab groups that already\nexist.",
+    "lastUpdated": "2026-08-04T20:19:14Z",
+    "lastAuthor": "unifolia",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "smartwindow-group-tabs-empty",
+    "file": "browser/locales-preview/autoTabGrouping.ftl",
+    "line": 21,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/autoTabGrouping.ftl#L21",
+    "section": "Organize Tabs Panel The panel opened from the \"Organize Tabs\" toolbar button, which suggests groups for the window's\u2026",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "No tab groups to suggest right now. Check again later."
+      }
+    ],
+    "variantNote": null,
+    "note": "Shown when clustering produced no group worth suggesting.",
+    "lastUpdated": "2026-08-04T20:19:14Z",
+    "lastAuthor": "unifolia",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "smartwindow-group-tabs-all-sorted",
+    "file": "browser/locales-preview/autoTabGrouping.ftl",
+    "line": 24,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/autoTabGrouping.ftl#L24",
+    "section": "Organize Tabs Panel The panel opened from the \"Organize Tabs\" toolbar button, which suggests groups for the window's\u2026",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Nice work organizing your tabs"
+      }
+    ],
+    "variantNote": null,
+    "note": "Shown in place of suggestions when every group the model found has already\nbeen created.",
+    "lastUpdated": "2026-08-04T20:19:14Z",
+    "lastAuthor": "unifolia",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "smartwindow-group-tabs-create-all",
+    "file": "browser/locales-preview/autoTabGrouping.ftl",
+    "line": 25,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/autoTabGrouping.ftl#L25",
+    "section": "Organize Tabs Panel The panel opened from the \"Organize Tabs\" toolbar button, which suggests groups for the window's\u2026",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Create Groups"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-08-04T20:19:14Z",
+    "lastAuthor": "unifolia",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "smartwindow-group-tabs-suggested-heading",
+    "file": "browser/locales-preview/autoTabGrouping.ftl",
+    "line": 26,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/autoTabGrouping.ftl#L26",
+    "section": "Organize Tabs Panel The panel opened from the \"Organize Tabs\" toolbar button, which suggests groups for the window's\u2026",
+    "field": "value",
+    "fieldLabel": "Heading",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Suggested groups"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-08-04T20:19:14Z",
+    "lastAuthor": "unifolia",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "smartwindow-group-tabs-flyout-list",
+    "file": "browser/locales-preview/autoTabGrouping.ftl",
+    "line": 31,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/autoTabGrouping.ftl#L31",
+    "section": "Organize Tabs Panel The panel opened from the \"Organize Tabs\" toolbar button, which suggests groups for the window's\u2026",
+    "field": ".aria-label",
+    "fieldLabel": "Screen reader label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": true,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Tabs in $groupLabel"
+      }
+    ],
+    "variantNote": null,
+    "note": "Accessible name for the flyout that lists the tabs of one suggested group.\nActivating a tab in the list switches to it. $groupLabel is the suggested\ngroup's name.",
+    "lastUpdated": "2026-08-04T20:19:14Z",
+    "lastAuthor": "unifolia",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "smartwindow-group-tabs-suggestion",
+    "file": "browser/locales-preview/autoTabGrouping.ftl",
+    "line": 37,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/autoTabGrouping.ftl#L37",
+    "section": "Organize Tabs Panel The panel opened from the \"Organize Tabs\" toolbar button, which suggests groups for the window's\u2026",
+    "field": ".aria-label",
+    "fieldLabel": "Screen reader label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": true,
+    "variants": [
+      {
+        "key": "One",
+        "isDefault": false,
+        "text": "Create group $groupLabel, $tabCount tab"
+      },
+      {
+        "key": "Other",
+        "isDefault": true,
+        "text": "Create group $groupLabel, $tabCount tabs"
+      }
+    ],
+    "variantNote": "Wording varies depending on $tabCount",
+    "note": "Accessible name for a suggested-group row. Activating the row creates the\ngroup. $groupLabel is the suggested group's name, $tabCount the number of\ntabs it would contain.",
+    "lastUpdated": "2026-08-04T20:19:14Z",
+    "lastAuthor": "unifolia",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "smartwindow-group-tabs-just-created-heading",
+    "file": "browser/locales-preview/autoTabGrouping.ftl",
+    "line": 42,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/autoTabGrouping.ftl#L42",
+    "section": "Organize Tabs Panel The panel opened from the \"Organize Tabs\" toolbar button, which suggests groups for the window's\u2026",
+    "field": "value",
+    "fieldLabel": "Heading",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Just created"
+      }
+    ],
+    "variantNote": null,
+    "note": "Heading for the list of groups the user just created (and can still undo).",
+    "lastUpdated": "2026-08-04T20:19:14Z",
+    "lastAuthor": "unifolia",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "smartwindow-group-tabs-ungroup",
+    "file": "browser/locales-preview/autoTabGrouping.ftl",
+    "line": 45,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/autoTabGrouping.ftl#L45",
+    "section": "Organize Tabs Panel The panel opened from the \"Organize Tabs\" toolbar button, which suggests groups for the window's\u2026",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Ungroup Tabs"
+      }
+    ],
+    "variantNote": null,
+    "note": "Action that dissolves every group in the \"Just created\" list. The tabs stay\nopen; only the grouping is removed.",
+    "lastUpdated": "2026-08-04T20:19:14Z",
+    "lastAuthor": "unifolia",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "smartwindow-group-tabs-close-duplicates",
+    "file": "browser/locales-preview/autoTabGrouping.ftl",
+    "line": 50,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/autoTabGrouping.ftl#L50",
+    "section": "Organize Tabs Panel The panel opened from the \"Organize Tabs\" toolbar button, which suggests groups for the window's\u2026",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": "One",
+        "isDefault": false,
+        "text": "Close $tabCount Duplicate Tab"
+      },
+      {
+        "key": "Other",
+        "isDefault": true,
+        "text": "Close $tabCount Duplicate Tabs"
+      }
+    ],
+    "variantNote": "Wording varies depending on $tabCount",
+    "note": "Action that closes this window's duplicate tabs, keeping the most recently\nused tab of each set. Only shown when there are duplicates to close, and\n$tabCount is exactly how many tabs activating it closes.",
+    "lastUpdated": "2026-08-04T20:19:14Z",
+    "lastAuthor": "unifolia",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "security-privacy-issue-warning-test",
+    "file": "browser/locales-preview/privacyPreferences.ftl",
+    "line": 6,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/privacyPreferences.ftl#L6",
+    "section": null,
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "A testing setting is enabled"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-02-20T16:26:51Z",
+    "lastAuthor": "bvandersloot-mozilla",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "security-privacy-issue-warning-test",
+    "file": "browser/locales-preview/privacyPreferences.ftl",
+    "line": 7,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/privacyPreferences.ftl#L7",
+    "section": null,
+    "field": ".description",
+    "fieldLabel": "Description",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "This causes Firefox to show this spurious warning, and nothing else"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-02-20T16:26:51Z",
+    "lastAuthor": "bvandersloot-mozilla",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "tab-group-editor-title-suggest",
+    "file": "browser/locales-preview/smartTabGroups.ftl",
+    "line": 5,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/smartTabGroups.ftl#L5",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Title",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Suggested tabs"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2025-04-02T16:28:38Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "tab-group-editor-smart-suggest-button-edit",
+    "file": "browser/locales-preview/smartTabGroups.ftl",
+    "line": 8,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/smartTabGroups.ftl#L8",
+    "section": null,
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Suggest more tabs for group"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2025-04-02T16:28:38Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "tab-group-editor-smart-suggest-button-create",
+    "file": "browser/locales-preview/smartTabGroups.ftl",
+    "line": 13,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/smartTabGroups.ftl#L13",
+    "section": null,
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Suggest more of my tabs"
+      }
+    ],
+    "variantNote": null,
+    "note": "Button appearing during creation of new tab group.\nClicking will suggest tabs to group together in the tab group.",
+    "lastUpdated": "2025-04-02T16:28:38Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "tab-group-editor-suggestions-header",
+    "file": "browser/locales-preview/smartTabGroups.ftl",
+    "line": 15,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/smartTabGroups.ftl#L15",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Heading",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Suggested Tabs"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2025-04-02T16:28:38Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "tab-group-suggestions-loading-header",
+    "file": "browser/locales-preview/smartTabGroups.ftl",
+    "line": 17,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/smartTabGroups.ftl#L17",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Heading",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Suggested Tabs"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2025-04-02T16:28:38Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "tab-group-editor-deselect-suggestions",
+    "file": "browser/locales-preview/smartTabGroups.ftl",
+    "line": 20,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/smartTabGroups.ftl#L20",
+    "section": null,
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Deselect all"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2025-04-02T16:28:38Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "tab-group-editor-select-suggestions",
+    "file": "browser/locales-preview/smartTabGroups.ftl",
+    "line": 23,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/smartTabGroups.ftl#L23",
+    "section": null,
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Select all"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2025-04-02T16:28:38Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "tab-group-editor-no-tabs-found-title",
+    "file": "browser/locales-preview/smartTabGroups.ftl",
+    "line": 26,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/smartTabGroups.ftl#L26",
+    "section": null,
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "No suggestions found"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2025-04-02T16:28:38Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "tab-group-editor-no-tabs-found-message",
+    "file": "browser/locales-preview/smartTabGroups.ftl",
+    "line": 28,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/smartTabGroups.ftl#L28",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Message text",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Open similar tabs, and AI will suggest a name and group them with this window\u2019s tabs."
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2025-04-02T16:28:38Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "tab-group-editor-information-message",
+    "file": "browser/locales-preview/smartTabGroups.ftl",
+    "line": 31,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/smartTabGroups.ftl#L31",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Message text",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "AI suggests names and tabs based on similar open tabs in this window."
+      }
+    ],
+    "variantNote": null,
+    "note": "Message is shown to the user whenever there are smart tags suggest",
+    "lastUpdated": "2025-04-02T16:28:38Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "tab-group-suggestions-optin-title",
+    "file": "browser/locales-preview/smartTabGroups.ftl",
+    "line": 34,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/smartTabGroups.ftl#L34",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Title",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Suggest more of my tabs"
+      }
+    ],
+    "variantNote": null,
+    "note": "Title appears when user is shown the opt-in flow to use smart tab grouping",
+    "lastUpdated": "2025-04-02T16:28:38Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "tab-group-suggestions-optin-message",
+    "file": "browser/locales-preview/smartTabGroups.ftl",
+    "line": 37,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/smartTabGroups.ftl#L37",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Message text",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Firefox uses AI to read your open tabs\u2019 titles and descriptions to <a data-l10n-name=\"support\">suggest more tabs and group names</a>. This happens on your device."
+      }
+    ],
+    "variantNote": null,
+    "note": "Message appears when user is shown the opt-in flow to use smart tab grouping",
+    "lastUpdated": "2025-04-02T16:28:38Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "tab-group-suggestions-optin-title-download",
+    "file": "browser/locales-preview/smartTabGroups.ftl",
+    "line": 39,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/smartTabGroups.ftl#L39",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Title",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Finding suggestions\u2026"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2025-04-02T16:28:38Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "tab-group-suggestions-optin-message-download",
+    "file": "browser/locales-preview/smartTabGroups.ftl",
+    "line": 41,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/smartTabGroups.ftl#L41",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Message text",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "This may take a moment."
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2025-04-02T16:28:38Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "tab-group-suggestions-optin-message-footer",
+    "file": "browser/locales-preview/smartTabGroups.ftl",
+    "line": 43,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/smartTabGroups.ftl#L43",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Message text",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Customize AI in <a data-l10n-name=\"settings\">settings</a>"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2025-04-02T16:28:38Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "settings-tabs-show-group-and-tab-suggestions",
+    "file": "browser/locales-preview/smartTabGroups.ftl",
+    "line": 47,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/browser/locales-preview/smartTabGroups.ftl#L47",
+    "section": null,
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Use AI to suggest tabs and a name for tab groups"
+      }
+    ],
+    "variantNote": null,
+    "note": "This is the label for the User setting for turning on/off Smart Tab Grouping. The label belongs in preferences/preferences.ftl",
+    "lastUpdated": "2025-04-02T16:28:38Z",
+    "lastAuthor": "nickgrato",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "restricted-page-title",
+    "file": "toolkit/locales-preview/aboutRestricted.ftl",
+    "line": 6,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/aboutRestricted.ftl#L6",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Title",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Restricted Content"
+      }
+    ],
+    "variantNote": null,
+    "note": "Title for error page",
+    "lastUpdated": "2025-10-17T16:58:37Z",
+    "lastAuthor": "bvandersloot-mozilla",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "restricted-page-heading",
+    "file": "toolkit/locales-preview/aboutRestricted.ftl",
+    "line": 8,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/aboutRestricted.ftl#L8",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Heading",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Error: Restricted Content"
+      }
+    ],
+    "variantNote": null,
+    "note": "Heading in content for the error page",
+    "lastUpdated": "2025-10-17T16:58:37Z",
+    "lastAuthor": "bvandersloot-mozilla",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "restricted-page-explain-what",
+    "file": "toolkit/locales-preview/aboutRestricted.ftl",
+    "line": 10,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/aboutRestricted.ftl#L10",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "The web page you tried to visit marked itself as adult content and Firefox is configured not to show you that content."
+      }
+    ],
+    "variantNote": null,
+    "note": "An explanation of why the user is landing on a error page instead of viewing adult content",
+    "lastUpdated": "2025-10-17T16:58:37Z",
+    "lastAuthor": "bvandersloot-mozilla",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "restricted-page-explain-what-named",
+    "file": "toolkit/locales-preview/aboutRestricted.ftl",
+    "line": 14,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/aboutRestricted.ftl#L14",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Firefox is configured not to show you adult content and <strong>$host</strong> marked the page you tried to visit as adult content."
+      }
+    ],
+    "variantNote": null,
+    "note": "An explanation of why the user is landing on a error page instead of viewing adult content\nVariables:\n  $host (String): The website that would be displaying adult content",
+    "lastUpdated": "2025-10-17T16:58:37Z",
+    "lastAuthor": "bvandersloot-mozilla",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "restricted-page-explain-why",
+    "file": "toolkit/locales-preview/aboutRestricted.ftl",
+    "line": 16,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/aboutRestricted.ftl#L16",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "We blocked this site because Parental Controls are enabled on your computer. You can disable them if you have administrator access."
+      }
+    ],
+    "variantNote": null,
+    "note": "An explanation of what configuration causes this error page to show up",
+    "lastUpdated": "2025-10-17T16:58:37Z",
+    "lastAuthor": "bvandersloot-mozilla",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "restricted-page-explain-why-always",
+    "file": "toolkit/locales-preview/aboutRestricted.ftl",
+    "line": 18,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/aboutRestricted.ftl#L18",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "We blocked this site because Parental Controls are enabled on Firefox."
+      }
+    ],
+    "variantNote": null,
+    "note": "An explanation of what configuration causes this error page to show up",
+    "lastUpdated": "2025-10-17T16:58:37Z",
+    "lastAuthor": "bvandersloot-mozilla",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "restricted-go-back-button",
+    "file": "toolkit/locales-preview/aboutRestricted.ftl",
+    "line": 20,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/aboutRestricted.ftl#L20",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Button label",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Go Back"
+      }
+    ],
+    "variantNote": null,
+    "note": "Button label to go back to the previous page",
+    "lastUpdated": "2025-10-17T16:58:37Z",
+    "lastAuthor": "bvandersloot-mozilla",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "find-more-addons-promo",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 11,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L11",
+    "section": null,
+    "field": ".heading",
+    "fieldLabel": "Heading",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Shape Firefox your way"
+      }
+    ],
+    "variantNote": null,
+    "note": "Promo footer shown in the about:addons recommendations view when\nProject Nova styles are enabled.\nThe heading refers to the user choosing a Firefox theme or extension to\ninstall. In the message, \"tools\" refers to Firefox extensions and\n\"styles\" refers to Firefox themes.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "find-more-addons-promo",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 12,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L12",
+    "section": null,
+    "field": ".message",
+    "fieldLabel": "Status message",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Add tools and styles to fit your needs and taste."
+      }
+    ],
+    "variantNote": null,
+    "note": "Promo footer shown in the about:addons recommendations view when\nProject Nova styles are enabled.\nThe heading refers to the user choosing a Firefox theme or extension to\ninstall. In the message, \"tools\" refers to Firefox extensions and\n\"styles\" refers to Firefox themes.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "find-more-addons-promo-open-amo-button",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 14,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L14",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Button label",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Explore extensions and themes"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "find-more-extensions-promo",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 20,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L20",
+    "section": null,
+    "field": ".heading",
+    "fieldLabel": "Heading",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Find your next favorite extension"
+      }
+    ],
+    "variantNote": null,
+    "note": "Promo footer shown in the about:addons extensions list view when\nProject Nova styles are enabled.\nIn the message, \"tools\" refers to Firefox extensions.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "find-more-extensions-promo",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 21,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L21",
+    "section": null,
+    "field": ".message",
+    "fieldLabel": "Status message",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Customize Firefox with tools for focus, privacy, shopping, and more."
+      }
+    ],
+    "variantNote": null,
+    "note": "Promo footer shown in the about:addons extensions list view when\nProject Nova styles are enabled.\nIn the message, \"tools\" refers to Firefox extensions.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "find-more-extensions-promo-open-amo-button",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 23,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L23",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Button label",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Explore extensions"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "find-more-themes-promo",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 29,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L29",
+    "section": null,
+    "field": ".heading",
+    "fieldLabel": "Heading",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Find more fresh looks"
+      }
+    ],
+    "variantNote": null,
+    "note": "Promo footer shown in the about:addons themes list view when\nProject Nova styles are enabled.\n\"Find more fresh looks\" refers to the user looking for more Firefox themes.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "find-more-themes-promo",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 30,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L30",
+    "section": null,
+    "field": ".message",
+    "fieldLabel": "Status message",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Choose a style that makes Firefox feel like yours."
+      }
+    ],
+    "variantNote": null,
+    "note": "Promo footer shown in the about:addons themes list view when\nProject Nova styles are enabled.\n\"Find more fresh looks\" refers to the user looking for more Firefox themes.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "find-more-themes-promo-open-amo-button",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 32,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L32",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Button label",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Explore themes"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "list-empty-get-extensions-promo",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 37,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L37",
+    "section": null,
+    "field": ".heading",
+    "fieldLabel": "Heading",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "A few extensions go a long way"
+      }
+    ],
+    "variantNote": null,
+    "note": "Promo shown in about:addons extensions list view when no extension is yet installed\nand Project Nova is enabled.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "list-empty-get-extensions-promo",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 38,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L38",
+    "section": null,
+    "field": ".message",
+    "fieldLabel": "Status message",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "We\u2019ve got recommendations to help you improve focus, privacy and more."
+      }
+    ],
+    "variantNote": null,
+    "note": "Promo shown in about:addons extensions list view when no extension is yet installed\nand Project Nova is enabled.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "list-empty-get-extensions-promo-button",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 40,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L40",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Button label",
+    "fieldLabelInferred": true,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Find your first extension"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "themes-mode-light",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 45,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L45",
+    "section": null,
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Light"
+      }
+    ],
+    "variantNote": null,
+    "note": "Themes Mode segmented control shown at the top of the about:addons themes list view\nwhen Project Nova is enabled.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "themes-mode-dark",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 48,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L48",
+    "section": null,
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Dark"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "themes-mode-device",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 51,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L51",
+    "section": null,
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Device"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "aboutaddons-themes-picker-heading",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 55,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L55",
+    "section": null,
+    "field": ".heading",
+    "fieldLabel": "Heading",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Firefox themes"
+      }
+    ],
+    "variantNote": null,
+    "note": "Heading for the in-product themes picker section in about:addons",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "aboutaddons-themes-picker-see-more",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 58,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L58",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Show more"
+      }
+    ],
+    "variantNote": null,
+    "note": "Show more / show less button at the bottom of the themes picker",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "aboutaddons-themes-picker-see-less",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 59,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L59",
+    "section": null,
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Show less"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "aboutaddons-themes-picker-enable-button",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 63,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L63",
+    "section": null,
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Enable"
+      }
+    ],
+    "variantNote": null,
+    "note": "Enable/disable/install buttons on each theme card",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "aboutaddons-themes-picker-disable-button",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 66,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L66",
+    "section": null,
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Disable"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "aboutaddons-themes-picker-install-button",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 69,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L69",
+    "section": null,
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Install"
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "aboutaddons-themes-picker-error-message",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 75,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L75",
+    "section": null,
+    "field": ".message",
+    "fieldLabel": "Status message",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Couldn\u2019t update your theme. Check your connection and try again."
+      }
+    ],
+    "variantNote": null,
+    "note": "Shown when a Nova theme fails to be downloaded, installed, enabled, or\ndisabled (e.g. no network access to reach the AMO-hosted theme, or a\nlocal install/disk failure).",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "aboutaddons-linux-theme-colors-checkbox-label",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 81,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L81",
+    "section": null,
+    "field": ".label",
+    "fieldLabel": "Label",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Use Linux system theme"
+      }
+    ],
+    "variantNote": null,
+    "note": "Checkbox shown inside the enabled default theme's addon-card, on Linux\nonly, to opt-in/opt-out matching the GTK/system theme colors instead of\nthe built-in default theme colors.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "extension-default-theme-description2",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 92,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L92",
+    "section": "Theme names shown in the Firefox Themes picker in about:addons and theme add-on card, and new default-theme description\u2026",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "A balanced, familiar grey-purple for a classic Firefox look."
+      }
+    ],
+    "variantNote": null,
+    "note": null,
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "extension-default-theme-name2",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 103,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L103",
+    "section": "Theme labels These are short, evocative names for color themes in Firefox",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Default"
+      }
+    ],
+    "variantNote": null,
+    "note": "Name for a neutral gray-purple theme. Conveys a standard, default look. Not a\ncolor word; translate the sense of \"standard.\"",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "extension-nova-sun-name",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 106,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L106",
+    "section": "Theme labels These are short, evocative names for color themes in Firefox",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Sun"
+      }
+    ],
+    "variantNote": null,
+    "note": "Name for a warm yellow-gold theme. Refers to the color of sunlight.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "extension-nova-spark-name",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 109,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L109",
+    "section": "Theme labels These are short, evocative names for color themes in Firefox",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Spark"
+      }
+    ],
+    "variantNote": null,
+    "note": "Name for a warm orange theme. Refers to a small burst of fire.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "extension-nova-flame-name",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 112,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L112",
+    "section": "Theme labels These are short, evocative names for color themes in Firefox",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Flame"
+      }
+    ],
+    "variantNote": null,
+    "note": "Name for a red-orange theme. Refers to the color of fire.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "extension-nova-flare-name",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 115,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L115",
+    "section": "Theme labels These are short, evocative names for color themes in Firefox",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Flare"
+      }
+    ],
+    "variantNote": null,
+    "note": "Name for a bright pink theme. Refers to a burst of light or fire.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "extension-nova-lavender-name",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 118,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L118",
+    "section": "Theme labels These are short, evocative names for color themes in Firefox",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Lavender"
+      }
+    ],
+    "variantNote": null,
+    "note": "Name for a soft purple theme. Refers to the lavender flower.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "extension-nova-dusk-name",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 121,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L121",
+    "section": "Theme labels These are short, evocative names for color themes in Firefox",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Dusk"
+      }
+    ],
+    "variantNote": null,
+    "note": "Name for a medium purple theme. Refers to the sky just after sunset.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "extension-nova-lagoon-name",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 124,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L124",
+    "section": "Theme labels These are short, evocative names for color themes in Firefox",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Lagoon"
+      }
+    ],
+    "variantNote": null,
+    "note": "Name for a medium blue theme. Refers to a sheltered body of water.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "extension-nova-pine-name",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 127,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L127",
+    "section": "Theme labels These are short, evocative names for color themes in Firefox",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Pine"
+      }
+    ],
+    "variantNote": null,
+    "note": "Name for a green theme. Refers to pine trees.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "extension-nova-tide-name",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 130,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L130",
+    "section": "Theme labels These are short, evocative names for color themes in Firefox",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Tide"
+      }
+    ],
+    "variantNote": null,
+    "note": "Name for a soft teal theme. Refers to ocean tides.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "extension-nova-ash-name",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 133,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L133",
+    "section": "Theme labels These are short, evocative names for color themes in Firefox",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Ash"
+      }
+    ],
+    "variantNote": null,
+    "note": "Name for a medium-dark gray theme. Refers to the gray residue left by fire.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "extension-nova-smoke-name",
+    "file": "toolkit/locales-preview/nova-aboutAddons.ftl",
+    "line": 136,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/nova-aboutAddons.ftl#L136",
+    "section": "Theme labels These are short, evocative names for color themes in Firefox",
+    "field": "value",
+    "fieldLabel": "Text",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Smoke"
+      }
+    ],
+    "variantNote": null,
+    "note": "Name for a warm gray-beige theme. Refers to the hazy color of smoke.",
+    "lastUpdated": "2026-08-04T20:21:53Z",
+    "lastAuthor": "rpl",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
+  },
+  {
+    "platform": "desktop",
+    "id": "smartwindow-themes-notice",
+    "file": "toolkit/locales-preview/smartWindow-aboutAddons.ftl",
+    "line": 7,
+    "sourceUrl": "https://github.com/mozilla-firefox/firefox/blob/main/toolkit/locales-preview/smartWindow-aboutAddons.ftl#L7",
+    "section": null,
+    "field": ".message",
+    "fieldLabel": "Status message",
+    "fieldLabelInferred": false,
+    "screenReaderOnly": false,
+    "variants": [
+      {
+        "key": null,
+        "isDefault": true,
+        "text": "Smart Window has its own built-in light and dark themes that follow your system settings."
+      }
+    ],
+    "variantNote": null,
+    "note": "Message-bar notice shown in the about:addons themes list view after users opt in into the Smart Window mode.",
+    "lastUpdated": "2026-02-25T21:00:40Z",
+    "lastAuthor": "mailelucks",
+    "stale": false,
+    "trigger": null,
+    "visibility": null,
+    "voiceChecked": false
   }
 ]

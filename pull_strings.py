@@ -6,8 +6,10 @@ commit metadata.
 
 Sources (auto-discovered, not hand-picked, so adding new files upstream
 doesn't require touching this script):
-  - Desktop: all .ftl files under browser/locales/en-US and
-    toolkit/locales/en-US in mozilla-firefox/firefox (Fluent format).
+  - Desktop: all .ftl files under browser/locales/en-US,
+    toolkit/locales/en-US, and the browser/toolkit locales-preview
+    directories (English-source strings for not-yet-localized features
+    like Smart Window) in mozilla-firefox/firefox (Fluent format).
   - Android: all base (English-source) strings.xml files under
     mobile/android/fenix and mobile/android/android-components in
     mozilla-firefox/firefox (Android XML format), excluding
@@ -110,6 +112,13 @@ SOURCES = [
         "roots": [
             {"path": "browser/locales/en-US", "ext": ".ftl"},
             {"path": "toolkit/locales/en-US", "ext": ".ftl"},
+            # locales-preview: English-source strings for features not yet
+            # exposed to localization (e.g. Smart Window / aiwindow). The l10n
+            # registry surfaces these under a virtual "preview/<file>.ftl"
+            # path, but the real source lives here; same Fluent format, so the
+            # existing parser and blame path handle them unchanged.
+            {"path": "browser/locales-preview", "ext": ".ftl"},
+            {"path": "toolkit/locales-preview", "ext": ".ftl"},
         ],
     },
     {
