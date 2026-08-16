@@ -22570,7 +22570,7 @@
     "note": "\"Recent\" refers to tab groups being sorted in recently used order. We show up\nto five of these in this section.",
     "lastUpdated": "2025-02-21T04:04:16Z",
     "lastAuthor": "daogottwald",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -22624,7 +22624,7 @@
     "note": "This is header for the sub view listing _all_ open and saved tab groups.",
     "lastUpdated": "2025-02-21T04:04:16Z",
     "lastAuthor": "daogottwald",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -22651,7 +22651,7 @@
     "note": null,
     "lastUpdated": "2025-02-21T04:04:16Z",
     "lastAuthor": "daogottwald",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -132758,9 +132758,9 @@
     ],
     "variantNote": null,
     "note": null,
-    "lastUpdated": "2020-10-07T18:39:20Z",
-    "lastAuthor": "Trikolon",
-    "stale": true,
+    "lastUpdated": "2026-08-14T20:54:18Z",
+    "lastAuthor": "rperta",
+    "stale": false,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -340818,7 +340818,7 @@
     "note": "Preference title for switch preference to show trending search suggestions",
     "lastUpdated": "2025-02-21T01:50:55Z",
     "lastAuthor": "rocketsroger",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
