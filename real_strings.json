@@ -118076,7 +118076,7 @@
     "note": null,
     "lastUpdated": "2025-02-21T16:53:18Z",
     "lastAuthor": "AllegroFox",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -118130,7 +118130,7 @@
     "note": null,
     "lastUpdated": "2025-02-21T16:53:18Z",
     "lastAuthor": "AllegroFox",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
