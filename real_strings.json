@@ -147090,7 +147090,7 @@
     "note": null,
     "lastUpdated": "2025-03-05T19:18:08Z",
     "lastAuthor": "eeejay",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -147117,7 +147117,7 @@
     "note": null,
     "lastUpdated": "2025-03-05T19:18:08Z",
     "lastAuthor": "eeejay",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -147144,7 +147144,7 @@
     "note": null,
     "lastUpdated": "2025-03-05T19:18:08Z",
     "lastAuthor": "eeejay",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -342490,7 +342490,7 @@
     "note": "Widget description for widget picker screen",
     "lastUpdated": "2025-03-05T20:16:49Z",
     "lastAuthor": "timchoh585",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
