@@ -6151,7 +6151,7 @@
     "note": "Message is shown to the user whenever there are smart tags suggest",
     "lastUpdated": "2025-03-27T20:49:38Z",
     "lastAuthor": "nickgrato",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -77816,7 +77816,7 @@
     "note": null,
     "lastUpdated": "2025-03-27T20:41:19Z",
     "lastAuthor": "Mardak",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -77843,7 +77843,7 @@
     "note": "\"Switch anytime\" refers to allowing the user to switch to a different chatbot.",
     "lastUpdated": "2025-03-27T20:41:19Z",
     "lastAuthor": "Mardak",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -97511,7 +97511,7 @@
     "note": null,
     "lastUpdated": "2025-03-28T11:21:18Z",
     "lastAuthor": "reemhamz",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -310003,7 +310003,7 @@
     "note": "Used when a signature editor is selected/hovered.\nVariables:\n  $description (String) - a string describing/labeling the signature.",
     "lastUpdated": "2025-03-27T21:13:44Z",
     "lastAuthor": "calixteman",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -387573,7 +387573,7 @@
     "note": "Label for the secondary action to exit private browsing mode",
     "lastUpdated": "2025-03-27T20:25:11Z",
     "lastAuthor": "Gela",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -387600,7 +387600,7 @@
     "note": "Label for the primary action button to unlock private tabs",
     "lastUpdated": "2025-03-27T20:25:11Z",
     "lastAuthor": "Gela",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
@@ -387627,7 +387627,7 @@
     "note": "Title text instructing the user to unlock private tabs",
     "lastUpdated": "2025-03-27T20:25:11Z",
     "lastAuthor": "Gela",
-    "stale": false,
+    "stale": true,
     "trigger": null,
     "visibility": null,
     "voiceChecked": false
